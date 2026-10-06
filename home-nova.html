@@ -147,7 +147,7 @@ footer .links a:hover{color:var(--ink)}
 footer .base{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--ink3);flex-wrap:wrap;gap:8px}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .rv.on{opacity:1;transform:none}
 
 @media (max-width:960px){
@@ -344,6 +344,7 @@ h1{font-size:34px}
 </footer>
 
 <script>
+document.documentElement.classList.add('js');
 // menu mobile
 var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
 burger.addEventListener('click',function(){mnav.classList.toggle('open')});
@@ -364,7 +365,10 @@ function anima(){
   requestAnimationFrame(passo);
 }
 var obs2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)anima()})},{threshold:.4});
-obs2.observe(document.querySelector('.viva'));
+var vivaEl=document.querySelector('.viva');
+if(vivaEl){obs2.observe(vivaEl);}
+else{anima_count();}
+function anima_count(){}
 </script>
 </body>
 </html>
