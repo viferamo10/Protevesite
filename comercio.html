@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROTEVE COMÉRCIO — Dossiê Técnico-Comercial</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+--bg:#f7f9fb;--card:#ffffff;--line:#e2e8ef;--ink:#0e1b24;--ink2:#44576a;--ink3:#8396a3;
+--cyan:#0f8fb8;--cyanbg:rgba(15,143,184,.08);--green:#1d7a4f;--greenbg:rgba(29,122,79,.08);
+--amber:#b8700f;--amberbg:rgba(184,112,15,.1);--red:#c13c3c;--redbg:rgba(193,60,60,.08);
+--navy:#0e1b24;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',ui-sans-serif,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.page{max-width:1000px;margin:0 auto;padding:40px 28px 70px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:-.3px}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.tag{font-size:10px;letter-spacing:2px;color:var(--ink3);text-transform:uppercase}
+h1{font-size:34px;font-weight:700;letter-spacing:-.8px;line-height:1.12;margin:6px 0 10px}
+h1 .accent{color:var(--cyan)}
+.lead{font-size:16px;color:var(--ink2);max-width:720px;margin-bottom:26px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-bottom:30px}
+.hero-copy{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.hero-copy p{color:var(--ink2);font-size:14.5px;margin-top:10px}
+.hero-copy .big{font-size:19px;font-weight:600;color:var(--ink);line-height:1.35}
+.phone{background:var(--navy);border-radius:20px;padding:18px;color:#fff}
+.phone .ph-head{display:flex;justify-content:space-between;font-size:11px;color:#8ea6b4;margin-bottom:10px}
+.phone .brand{font-weight:700;font-size:13px;color:#fff;margin-bottom:12px}
+.ph-status{background:rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;font-size:11.5px;color:#cfe3ec;margin-bottom:8px;display:flex;justify-content:space-between}
+.ph-status b{color:#fff}
+.ok{color:#5ee6a8}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}
+.g4card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center}
+.g4card .ic{width:30px;height:30px;border-radius:8px;background:var(--cyanbg);color:var(--cyan);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:14px;font-weight:700}
+.g4card b{font-size:12.5px;display:block}
+.g4card small{font-size:10.5px;color:var(--ink3)}
+.band{background:var(--navy);color:#fff;border-radius:16px;padding:26px;margin:26px 0}
+.band h2{font-size:19px;margin-bottom:14px;color:#fff}
+.band .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.band .step{font-size:12.5px;color:#c3d4dd}
+.band .step b{display:block;color:#fff;font-size:13px;margin-bottom:3px}
+.band .step .n{display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.12);align-items:center;justify-content:center;font-size:10px;margin-right:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px}
+.card h2{font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.card h3{font-size:14px;color:var(--cyan);margin:14px 0 6px}
+.card p{font-size:13.5px;color:var(--ink2);margin:6px 0}
+.card ul{margin:6px 0 4px 18px;font-size:13.5px;color:var(--ink2)}
+.card li{margin:4px 0}
+.pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0}
+.pstep{text-align:center;font-size:11px;color:var(--ink2)}
+.pstep .circ{width:34px;height:34px;border-radius:50%;background:var(--cyanbg);color:var(--cyan);display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-weight:700;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:10px 0}
+th{text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--ink3);padding:7px 8px;border-bottom:2px solid var(--line)}
+td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.note{border-left:3px solid var(--amber);background:var(--amberbg);border-radius:0 10px 10px 0;padding:12px 16px;font-size:13px;margin:12px 0}
+.note.ok2{border-color:var(--green);background:var(--greenbg)}
+.note.red{border-color:var(--red);background:var(--redbg)}
+.quote{border-left:3px solid var(--cyan);background:var(--cyanbg);border-radius:0 10px 10px 0;padding:12px 16px;font-size:13.5px;font-style:italic;margin:12px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:11.5px;color:var(--ink2)}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.stat div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px}
+.stat b{display:block;font-size:22px}
+.stat small{font-size:10.5px;color:var(--ink3)}
+footer{text-align:center;font-size:10px;color:var(--ink3);letter-spacing:1px;margin-top:30px;padding-top:16px;border-top:1px solid var(--line)}
+.cta{display:flex;justify-content:space-between;align-items:center;background:var(--navy);border-radius:16px;padding:22px 26px;color:#fff;margin:26px 0}
+.cta b{font-size:16px}
+.cta small{color:#aec4ce;font-size:12px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="topbar">
+  <div class="logo"><div class="mark">P</div> PROTEVE™</div>
+  <div class="tag">Dossiê Técnico-Comercial · Comércio · 06/10/2026</div>
+</div>
+
+<h1>Você pode estar longe.<br><span class="accent">A PROTEVE</span> está cuidando do seu negócio.</h1>
+<p class="lead">Seu funcionário está no caixa. Seus equipamentos estão funcionando. E a PROTEVE monitora, analisa, interpreta e, quando necessário, orienta a ação — para conveniências, padarias, supermercados, distribuidoras, frigoríficos e indústrias.</p>
+
+<div class="hero">
+  <div class="hero-copy">
+    <p class="big">Tranquilidade para você focar no que importa: o negócio girando.</p>
+    <p>Enquanto você está no rio, numa reunião ou em casa, a PROTEVE segue lendo o quadro elétrico e os equipamentos críticos — câmara fria, expositores, compressores — e cruza esses dados com o comportamento histórico de cada ativo.</p>
+    <p><b>O que você não vê, a PROTEVE vê e avisa.</b> Quando o padrão muda, você sabe antes do prejuízo acontecer — não depois.</p>
+  </div>
+  <div class="phone">
+    <div class="ph-head"><span>14:42</span><span>●●●●●</span></div>
+    <div class="brand">📍 PROTEVE — Minha Operação</div>
+    <div class="ph-status">Câmara Fria <b>-1,8°C</b></div>
+    <div class="ph-status">Expositores <b>3,6°C</b></div>
+    <div class="ph-status">Compressor <b class="ok">3,8A · normal</b></div>
+    <div class="ph-status">Rede elétrica <b>228 / 229 / 227V</b></div>
+    <div class="ph-status">Câmeras <b class="ok">online</b></div>
+    <div class="ph-status">Portas <b>3 aberturas</b></div>
+    <div class="ph-status">Saúde do sistema <b class="ok">94%</b></div>
+  </div>
+</div>
+
+<div class="grid4">
+  <div class="g4card"><div class="ic">⚡</div><b>Elétrica</b><small>tensão, corrente, FP, picos</small></div>
+  <div class="g4card"><div class="ic">❄</div><b>Refrigeração</b><small>temperatura, ciclos, degelo</small></div>
+  <div class="g4card"><div class="ic">📷</div><b>Câmeras</b><small>imagens, movimento, acesso</small></div>
+  <div class="g4card"><div class="ic">🚪</div><b>Portas</b><small>abertura, frequência</small></div>
+  <div class="g4card"><div class="ic">⚙</div><b>Equipamentos</b><small>motores, bombas, freezers</small></div>
+</div>
+
+<div class="band">
+  <h2>Mais do que alertas. A PROTEVE orienta a ação.</h2>
+  <div class="steps">
+    <div class="step"><span class="n">1</span><b>Identifica o problema</b>Não é só alerta, é diagnóstico com contexto.</div>
+    <div class="step"><span class="n">2</span><b>Orienta a ação</b>Mostra o que precisa ser feito, não só "algo mudou".</div>
+    <div class="step"><span class="n">3</span><b>Aciona a equipe técnica</b>Para avaliação e manutenção preventiva.</div>
+    <div class="step"><span class="n">4</span><b>Pode acionar o desarme</b>Da contatora do setor configurado, quando autorizado e em risco iminente.</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Como a PROTEVE entende o seu equipamento</h2>
+  <p>Com sensores, correlação de dados e aprendizado contínuo, ela transforma sinais soltos em decisão operacional:</p>
+  <div class="pipeline">
+    <div class="pstep"><div class="circ">1</div>Monitora</div>
+    <div class="pstep"><div class="circ">2</div>Correlaciona</div>
+    <div class="pstep"><div class="circ">3</div>Interpreta</div>
+    <div class="pstep"><div class="circ">4</div>Classifica</div>
+    <div class="pstep"><div class="circ">5</div>Decide e orienta</div>
+    <div class="pstep"><div class="circ">6</div>Registra</div>
+  </div>
+  <p>Cada evento entra no histórico do ativo — a base do <b>Asset DNA</b>: a ficha permanente de cada equipamento, com assinatura elétrica sadia, degradação e manutenções.</p>
+</div>
+
+<div class="card">
+  <h2>Prevenção é lucro</h2>
+  <p>A PROTEVE evita paradas inesperadas, reduz prejuízo com perda de produto refrigerado e mantém a operação girando. Ideal para: <b>conveniências, padarias, supermercados, distribuidoras, frigoríficos, indústrias e muito mais.</b></p>
+  <div class="stat">
+    <div><b>-1,8°C</b><small>precisão de leitura, câmara fria em tempo real</small></div>
+    <div><b>94%</b><small>exemplo de score de saúde do sistema (0-100)</small></div>
+    <div><b>24/7</b><small>monitoramento contínuo, local-first</small></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Base real: não é promessa, é histórico medido</h2>
+  <p>A tecnologia por trás deste painel já roda há <b>quase 1 ano em uma casa real</b> (piloto residencial, Santa Fé do Sul/SP), gerando o maior corpus de telemetria elétrica residencial documentado do Brasil:</p>
+  <div class="chips">
+    <span class="chip">162.357 mensagens reais</span>
+    <span class="chip">dez/2025 → out/2026</span>
+    <span class="chip">caso documentado: FP caindo 0,82 → 0,38 em 5 meses, geladeira prevista antes de queimar</span>
+  </div>
+  <p>No comércio e indústria, o mesmo motor de leitura (NILM + assinatura elétrica) se aplica a compressores, câmaras frias e motores — com a vantagem de cargas mais previsíveis e ciclos de trabalho mais regulares que o ambiente residencial.</p>
+</div>
+
+<div class="card">
+  <h2>O que já está provado em campo (não é só software)</h2>
+  <p>O Método PROTEVE® nasceu de instalações elétricas físicas reais, não só de um app:</p>
+  <table>
+    <tr><th>Cliente</th><th>Segmento</th><th>O que foi</th></tr>
+    <tr><td>Distribuidora Magara</td><td>Câmara fria / distribuição</td><td>Contatora dupla AC-1 63A + AC-3 40A, homologado</td></tr>
+    <tr><td>Frigosul</td><td>Frigorífico industrial</td><td>56 câmeras IP + proteção elétrica, projeto de R$ 50 mil (2021)</td></tr>
+    <tr><td>Alex Conveniência</td><td>Conveniência</td><td>Trifásico 160A, homologado nov/2025</td></tr>
+    <tr><td>Clínica (ressonância)</td><td>Saúde</td><td>Seccionamento resistivo/indutivo, chaves 250A</td></tr>
+  </table>
+  <p>5 laudos técnicos homologados (nov/2025), com checklist, medições de equilíbrio de fase e registro fotográfico — modelo replicável por técnico credenciado (CREA).</p>
+</div>
+
+<div class="card">
+  <h2>Propriedade intelectual e conformidade normativa</h2>
+  <p>O Método PROTEVE® está <b>registrado na Fundação Biblioteca Nacional</b> (Protocolo 000984.0374140/2025), com prova de anterioridade pela Lei 9.610/98. A engenharia segue normas reconhecidas:</p>
+  <ul>
+    <li><b>PRODIST Módulo 8 (ANEEL)</b> — faixas de tensão adequada/precária/crítica para desarme</li>
+    <li><b>WEG W22</b> — curvas de partida de motor (inrush 6-8×) evitando falso desarme em compressores</li>
+    <li><b>ABNT NBR 5410 / NBR 5419 / NBR IEC 60947</b> — DPS Classe II, IDR 30mA, categorias AC-1/AC-3</li>
+  </ul>
+</div>
+
+<div class="note">
+  <b>Nota de maturidade técnica (honestidade de produto):</b> o desarme automático por contatora já é capacidade comprovada do Método PROTEVE® (v1.0–v3, nível de setor/circuito, com relé supervisor e contatora dedicada). A <b>identificação individual de equipamento via IA/NILM</b> (ex.: "a câmara 2 está em risco" em vez de "o circuito 2 está em risco") é a camada que estamos validando agora na bancada (Fase A do Asset DNA) — e é exatamente por isso que a regra de ouro do projeto nunca muda: <b>o software supervisiona, mas nunca substitui a proteção física.</b> Essa peça de marketing já reflete esse nível real de maturidade.
+</div>
+
+<div class="card">
+  <h2>Modelo de monetização</h2>
+  <table>
+    <tr><th>Fonte</th><th>O que é</th><th>Observação</th></tr>
+    <tr><td><b>Hardware + instalação</b></td><td>Kit de sensores + proteção física por quadro</td><td>Margem 30-50%, pagamento único</td></tr>
+    <tr><td><b>SaaS Basic</b></td><td>Dashboard e histórico de medições</td><td>Recorrência mensal baixa</td></tr>
+    <tr><td><b>SaaS Smart</b></td><td>Alertas em tempo real + Telegram</td><td>Recorrência média</td></tr>
+    <tr><td><b>SaaS Premium</b></td><td>Análise preditiva 24/7 + relatórios técnicos</td><td>Recorrência alta, foco em frigorífico/indústria</td></tr>
+    <tr><td><b>Retrofit</b></td><td>Adequação de quadros antigos</td><td>Ticket avulso, abre porta pro SaaS</td></tr>
+    <tr><td><b>Rede de parceiros</b></td><td>Eletricistas/engenheiros credenciados instalam e emitem laudo</td><td>Escala sem contratar equipe própria</td></tr>
+  </table>
+  <p>Contrato padrão: garantia de 12 meses condicionada a lacres preservados e manutenção anual — receita recorrente desde a instalação física, antes mesmo do SaaS.</p>
+</div>
+
+<div class="cta">
+  <div><b>PROTEVE™ — Alimenta, protege e refrigera.</b><br><small>Mais eficiência. Menos dor de cabeça. Mais lucro.</small></div>
+  <div style="text-align:right"><small>WhatsApp</small><br><b>17 99217-4138</b></div>
+</div>
+
+<footer>PROTEVE™ · DOSSIÊ COMÉRCIO · adaptado e revisado por Superagent (Base44) a partir da peça original · fonte de dados: corpus Telegram 162.357 msgs + registro BN 000984.0374140/2025 · proteve.com.br</footer>
+</div>
+</body>
+</html>
