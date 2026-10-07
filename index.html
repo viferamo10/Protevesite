@@ -252,6 +252,27 @@ h1{font-size:34px}
 .sobpt b{display:block;font-size:14.5px;margin-bottom:2px}
 .sobpt p{font-size:13px;color:var(--ink2);margin:0}
 @media (max-width:960px){.sobre{grid-template-columns:1fr;gap:24px;padding:40px 0}}
+
+/* caso geladeira */
+.caso{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+.casocopy .label{display:block;margin-bottom:8px}
+.casocopy h2{font-size:32px;letter-spacing:-.035em;margin-bottom:16px}
+.casocopy p{font-size:15px;color:var(--ink2);margin-bottom:12px;max-width:540px}
+.fpcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.fpcard .label{display:block;margin-bottom:6px}
+.fpbig{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.fpbig small{font-size:13px;color:var(--ink3);font-weight:400}
+.fpnotes{margin-top:14px;display:grid;gap:8px}
+.fpnotes .chip{background:var(--paper)}
+.casonote{font-size:11.5px;color:var(--ink3);margin-top:18px;line-height:1.5}
+/* casa que ensinou */
+.ens{padding:14px 0 56px}
+.ensgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.enst{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.enst .label{display:block;margin-bottom:8px;color:var(--cyan-deep)}
+.enst b{font-size:15px;display:block;margin-bottom:4px}
+.enst p{font-size:13px;color:var(--ink2);margin:0}
+@media (max-width:960px){.caso{grid-template-columns:1fr;gap:26px;padding:40px 0}.ensgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -490,6 +511,65 @@ h1{font-size:34px}
   </div>
 </section>
 
+
+
+<!-- CASO DA GELADEIRA -->
+<section id="caso" style="padding-top:0">
+  <div class="wrap">
+    <div class="caso">
+      <div class="casocopy">
+        <span class="label">CASO REAL · CASA-PILOTO</span>
+        <h2>A geladeira avisou<br>antes de <span style="color:var(--cyan-deep)">queimar.</span></h2>
+        <p>Numa casa real monitorada 251 dias seguidos, a PROTEVE viu a geladeira começar a trabalhar diferente: cada vez mais ciclos, cada vez mais corrente, cada vez menos gelo.</p>
+        <p>Foram <b>5 meses de sinais claros</b> antes do compressor queimar. O histórico guardava a história inteira: nenhuma queima foi surpresa, foi um desfile de sintomas.</p>
+        <p>Na próxima geladeira, a diferença é o aviso chegar com tempo de sobra pra <b>decidir antes do prejuízo</b>.</p>
+      </div>
+      <div class="fpcard">
+        <span class="label">FATOR DE POTÊNCIA · MAR→JUL/2026</span>
+        <div class="fpbig">0,82 <span style="color:var(--ink3)">→</span> 0,38</div>
+        <svg viewBox="0 0 300 150" width="100%" height="auto" role="img" aria-label="Queda do fator de potência da geladeira de março a julho de 2026">
+          <line x1="20" y1="130" x2="280" y2="130" stroke="var(--line2)" stroke-width="1"/>
+          <polyline points="20,35 68,59 116,77 164,102 212,106 260,115" fill="none" stroke="var(--cyan-deep)" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="20" cy="35" r="4" fill="var(--cyan-deep)"/>
+          <circle cx="68" cy="59" r="4" fill="var(--cyan-deep)"/>
+          <circle cx="116" cy="77" r="4" fill="var(--cyan-deep)"/>
+          <circle cx="164" cy="102" r="4" fill="var(--cyan-deep)"/>
+          <circle cx="212" cy="106" r="4" fill="var(--cyan-deep)"/>
+          <circle cx="260" cy="115" r="5" fill="var(--navy)"/>
+          <text x="20" y="24" font-size="10" fill="var(--ink2)" font-family="DM Mono,monospace">0,82</text>
+          <text x="238" y="104" font-size="10" fill="var(--ink2)" font-family="DM Mono,monospace">0,38</text>
+          <text x="20" y="145" font-size="9" fill="var(--ink3)" font-family="DM Mono,monospace">MAR</text>
+          <text x="245" y="145" font-size="9" fill="var(--ink3)" font-family="DM Mono,monospace">JUL</text>
+        </svg>
+        <div class="fpnotes">
+          <span class="chip">ciclos/dia: 5,6 → 8,9 (+60%)</span>
+          <span class="chip">sinais 5 meses antes da queima</span>
+          <span class="chip">nova unidade instalada: 6,0 ciclos/dia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A CASA QUE ENSINOU -->
+<section id="ensinou" style="padding-top:0">
+  <div class="wrap ens">
+    <div class="shead">
+      <span class="label">APRENDIZADO REAL · 251 DIAS DE OPERAÇÃO</span>
+      <h2>A casa que <span>ensinou</span> a PROTEVE.</h2>
+      <p>Sistema bom não nasce pronto: nasce de operação real. Cada carga abaixo foi detectada numa casa de verdade, e cada instalação nova começa mais inteligente por causa disso.</p>
+    </div>
+    <div class="ensgrid">
+      <div class="enst"><span class="label">CARGA ~2.800 W</span><b>Forno elétrico</b><p>Mais potente que a airfryer, e com horário próprio: a telemetria mostrou exatamente quando a cozinha pega fogo.</p></div>
+      <div class="enst"><span class="label">700 EVENTOS</span><b>Exaustor</b><p>Acionamentos mapeados: maioria perto do meio-dia e no fim da tarde. A rotina da família, lida em corrente elétrica.</p></div>
+      <div class="enst"><span class="label">3 PICOS CARACTERÍSTICOS</span><b>Chuveiros</b><p>Cada banho com sua assinatura de consumo. O horário mais quente da casa virou dado de operação.</p></div>
+      <div class="enst"><span class="label">9K · 12K · 18K BTU</span><b>Ar-condicionado</b><p>Os splits da casa entraram no mapa de cargas: refrigeração acompanhada hora a hora, junto do resto da casa.</p></div>
+      <div class="enst"><span class="label">EVENTO DE SEGUNDOS</span><b>Portão eletrônico</b><p>Aberturas curtas registradas como eventos: até o movimento da casa vira histórico consultável.</p></div>
+      <div class="enst"><span class="label">MAPA ELÉTRICO</span><b>Bomba de piscina e bebedouro</b><p>Do motor da piscina ao bebedouro do corredor: cada carga recebe seu lugar no mapa da instalação.</p></div>
+    </div>
+    <p class="casonote">Casos e aprendizados reais da casa-piloto PROTEVE, registrados pelos próprios sensores do sistema. Identificação individual por assinatura elétrica em fase de validação de bancada.</p>
+  </div>
+</section>
 
 <!-- SOBRE -->
 <section id="sobre" style="padding-top:0">
