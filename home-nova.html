@@ -196,6 +196,18 @@ h1{font-size:34px}
 .deep{gap:22px;padding:40px 0}
 .dimg.two{grid-template-columns:1fr}
 }
+
+/* sobre */
+.sobre{display:grid;grid-template-columns:1.15fr 1fr;gap:46px;align-items:start;padding:56px 0;border-top:1px solid var(--line)}
+.sobcopy .label{display:block;margin-bottom:8px}
+.sobcopy h2{font-size:32px;letter-spacing:-.035em;margin-bottom:14px}
+.sobcopy p{font-size:15px;color:var(--ink2);margin-bottom:12px;max-width:520px}
+.sobpts{display:grid;gap:12px}
+.sobpt{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.sobpt .ic{flex:0 0 34px;height:34px;border-radius:9px;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;font-size:15px}
+.sobpt b{display:block;font-size:14.5px;margin-bottom:2px}
+.sobpt p{font-size:13px;color:var(--ink2);margin:0}
+@media (max-width:960px){.sobre{grid-template-columns:1fr;gap:24px;padding:40px 0}}
 </style>
 </head>
 <body>
@@ -208,6 +220,7 @@ h1{font-size:34px}
       <a href="#produtos">Produtos</a>
       <a href="#converse">Converse</a>
       <a href="#provas">Por que confiar</a>
+      <a href="#sobre">Sobre</a>
     </nav>
     <a class="wa-btn" href="https://wa.me/5517992174138" target="_blank" rel="noopener">Fale com a PROTEVE</a>
     <button class="burger" id="burger" aria-label="menu">☰</button>
@@ -217,6 +230,7 @@ h1{font-size:34px}
     <a href="#produtos">Produtos</a>
     <a href="#converse">Converse com a PROTEVE</a>
     <a href="#provas">Por que confiar</a>
+    <a href="#sobre">Sobre</a>
     <a href="https://wa.me/5517992174138">Falar no WhatsApp</a>
   </div>
 </header>
@@ -432,6 +446,26 @@ h1{font-size:34px}
   </div>
 </section>
 
+
+<!-- SOBRE -->
+<section id="sobre" style="padding-top:0">
+  <div class="wrap">
+    <div class="sobre">
+      <div class="sobcopy">
+        <span class="label">SOBRE A PROTEVE</span>
+        <h2>Quatorze anos de campo.<br>Agora com <span style="color:var(--cyan-deep)">inteligência.</span></h2>
+        <p>Antes de existir como produto, a PROTEVE viveu no chão de obra: mais de uma década instalando e mantendo câmeras, alarmes, cercas, redes e quadros elétricos em residências, comércios, fazendas e indústrias da região de Santa Fé do Sul/SP.</p>
+        <p>O que mudou não foi o compromisso, foi a capacidade: hoje a mesma experiência de campo opera com uma camada de inteligência que aprende o comportamento da sua instalação e avisa antes do prejuízo. <b>PROTEGEMOS O QUE FUNCIONA.</b></p>
+      </div>
+      <div class="sobpts">
+        <div class="sobpt"><div class="ic">®</div><div><b>Método registrado</b><p>O Método PROTEVE® tem registro de anterioridade na Fundação Biblioteca Nacional, protocolo 000984.0374140/2025 (Lei 9.610/98).</p></div></div>
+        <div class="sobpt"><div class="ic">⚙</div><div><b>Fundador técnico</b><p>Vinicius F. Amorim, técnico em informática, CFTV, alarmes e elétrica residencial, com treinamentos NR-10, NR-35 e NR-33.</p></div></div>
+        <div class="sobpt"><div class="ic">✓</div><div><b>Responsável técnico quando a norma exige</b><p>Projetos, laudos e ARTs contam com parceiros e responsáveis técnicos CREA, conforme a Lei 5.194/66.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="fgrid">
@@ -440,13 +474,25 @@ h1{font-size:34px}
         <p>Energia, refrigeração e segurança sob uma única camada de inteligência.<br>Santa Fé do Sul/SP e região.</p>
       </div>
       <div class="links">
-        <a href="./comercio.html">PROTEVE Comércio</a>
         <a href="#como">Como funciona</a>
-        <a href="https://wa.me/5517992174138">WhatsApp 17 99217-4138</a>
-        <a href="https://t.me/protevecanal">Telegram</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#converse">Converse com a PROTEVE</a>
+        <a href="#provas">Por que confiar</a>
+        <a href="#sobre">Sobre nós</a>
+      </div>
+      <div class="links">
+        <a href="https://wa.me/5517992174138">WhatsApp (17) 99217-4138</a>
+        <a href="https://t.me/protevecanal">Telegram @protevecanal</a>
+        <a href="mailto:sac.proteve@proton.me">sac.proteve@proton.me</a>
+        <a href="./comercio.html">Dossiê PROTEVE Comércio</a>
+      </div>
+      <div class="links">
+        <a href="./privacidade.html">Política de Privacidade</a>
+        <a href="./termos.html">Termos de Uso</a>
+        <a href="./cookies.html">Política de Cookies</a>
       </div>
     </div>
-    <div class="base"><span>PROTEVE™ · PROTEGEMOS O QUE FUNCIONA</span><span>Santa Fé do Sul — SP · proteve.com.br</span></div>
+    <div class="base"><span>PROTEVE™ é nome de fantasia de Vinicius Fernando Amorim · Av. Mangará, 44, Sala 1, Jd. Mangará · Santa Fé do Sul/SP</span><span>© 2026 · PROTEGEMOS O QUE FUNCIONA</span></div>
   </div>
 </footer>
 
