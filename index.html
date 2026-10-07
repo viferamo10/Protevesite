@@ -273,6 +273,22 @@ h1{font-size:34px}
 .enst b{font-size:15px;display:block;margin-bottom:4px}
 .enst p{font-size:13px;color:var(--ink2);margin:0}
 @media (max-width:960px){.caso{grid-template-columns:1fr;gap:26px;padding:40px 0}.ensgrid{grid-template-columns:1fr}}
+
+/* entrada nichos */
+.prodintro{display:grid;grid-template-columns:360px 1fr;gap:44px;align-items:center;margin-top:26px}
+.prodimg{position:relative}
+.prodimg img{width:100%;display:block;border-radius:18px;border:1px solid var(--line2);box-shadow:0 24px 50px rgba(14,27,36,.14)}
+.prodimg .ilus{position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--ink2)}
+.prodnav{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prn{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;transition:transform .18s ease,box-shadow .18s ease;display:block}
+.prn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,27,36,.09)}
+.prn b{display:block;font-size:15.5px;letter-spacing:-.02em;margin-bottom:3px}
+.prn p{font-size:12.5px;color:var(--ink2);margin-bottom:8px}
+.prn .lnk{font-size:12px;font-weight:600;color:var(--cyan-deep);border-bottom:1px solid var(--line2);padding-bottom:2px}
+@media (max-width:960px){.prodintro{grid-template-columns:1fr;gap:24px}.prodnav{grid-template-columns:1fr}}
+/* ficha de nicho alta */
+.dimg.tall img{aspect-ratio:2/3;object-fit:cover;object-position:top}
+.dimgcap{font-size:10.5px;color:var(--ink3);margin-top:8px;text-align:center}
 </style>
 </head>
 <body>
@@ -358,11 +374,17 @@ h1{font-size:34px}
       <h2>Uma família para <span>cada operação.</span></h2>
       <p>O mesmo núcleo de inteligência, adaptado à realidade de cada tipo de propriedade.</p>
     </div>
-    <div class="prods">
-      <a href="#res" class="pr"><div class="thumb"><img src="./img/nicho-casa.webp" alt="PROTEVE Residência" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>RESIDÊNCIA</h3><p>Casas, sobrados e sítios. Chuveiro, bomba, geladeira, portão e solar sob olhar permanente.</p><span class="lnk">Ver mais ↓</span></div></a>
-      <a href="#com" class="pr"><div class="thumb"><img src="./img/nicho-comercio.webp" alt="PROTEVE Comércio" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>COMÉRCIO</h3><p>Conveniências, padarias, supermercados e distribuidoras. Câmara fria, expositores e compressores supervisionados.</p><span class="lnk">Ver mais ↓</span></div></a>
-      <a href="#faz" class="pr"><div class="thumb"><img src="./img/nicho-fazenda.webp" alt="PROTEVE Fazenda" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>FAZENDA</h3><p>Bombas, irrigação, cercas e câmaras frias. A operação rural acompanhada de onde você estiver.</p><span class="lnk">Ver mais ↓</span></div></a>
-      <a href="#ind" class="pr"><div class="thumb"><img src="./img/nicho-industria.webp" alt="PROTEVE Indústria" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>INDÚSTRIA</h3><p>Motores, compressores e processos com assinatura elétrica monitorada e histórico por ativo.</p><span class="lnk">Ver mais ↓</span></div></a>
+    <div class="prodintro">
+      <div class="prodimg">
+        <img src="./img/nichos-entrada.webp" alt="Os quatro mundos da PROTEVE: Residência, Comércio, Fazenda e Indústria (visual ilustrativo gerado por IA)" loading="lazy">
+        <span class="ilus">VISUAL ILUSTRATIVO · GERADO POR IA</span>
+      </div>
+      <div class="prodnav">
+        <a href="#res" class="prn"><b>PROTEVE™ RESIDÊNCIA</b><p>Casas, sobrados e sítios. Chuveiro, bomba, geladeira, portão e solar sob olhar permanente.</p><span class="lnk">Ver mais ↓</span></a>
+        <a href="#com" class="prn"><b>PROTEVE™ COMÉRCIO</b><p>Conveniências, padarias, supermercados e distribuidoras. Câmara fria, expositores e compressores supervisionados.</p><span class="lnk">Ver mais ↓</span></a>
+        <a href="#faz" class="prn"><b>PROTEVE™ FAZENDA</b><p>Bombas, irrigação, cercas e câmaras frias. A operação rural acompanhada de onde você estiver.</p><span class="lnk">Ver mais ↓</span></a>
+        <a href="#ind" class="prn"><b>PROTEVE™ INDÚSTRIA</b><p>Motores, compressores e processos com assinatura elétrica monitorada e histórico por ativo.</p><span class="lnk">Ver mais ↓</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -375,15 +397,16 @@ h1{font-size:34px}
       <div class="dcopy">
         <span class="tag">PROTEVE™ RESIDÊNCIA</span>
         <h3>Sua casa, sem susto na conta nem no equipamento.</h3>
-        <p>A PROTEVE monitora o consumo da casa inteira em tempo real e prioriza o que importa: quando várias cargas ligam juntas (chuveiro, ar-condicionado, forno, carro elétrico), ela gerencia a demanda antes de virar sobrecarga.</p>
+        <p>A PROTEVE monitora o consumo da casa inteira em tempo real e prioriza o que importa: quando várias cargas ligam juntas (chuveiro, ar-condicionado, forno, carro elétrico), ela monitora a demanda e avisa antes de virar sobrecarga.</p>
         <ul>
           <li>Monitoramento de chuveiro, ar-condicionado, geladeira, bomba de piscina e portão</li>
-          <li>Gestão de prioridade de cargas — mantém o essencial, ajusta o resto</li>
-          <li>Alertas no app, Telegram ou Alexa</li>
+          <li>Gestão de prioridade de cargas (em desenvolvimento) — mantém o essencial, ajusta o resto</li>
+          <li>Alertas direto no Telegram, no seu celular</li>
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Resid%C3%AAncia" target="_blank" rel="noopener">Quero para minha casa →</a>
       </div>
-      <div class="dimg"><img src="./img/img-residencia.webp" alt="PROTEVE Residência: gestão inteligente de cargas elétricas da casa" loading="lazy"></div>
+      <div class="dimg tall"><img src="./img/nicho-det-residencia.webp" alt="PROTEVE Residência: casa monitorada em tempo real, do chuveiro à geladeira (visual ilustrativo gerado por IA)" loading="lazy"></div>
+      <div class="dimgcap" style="order:3">Visual ilustrativo gerado por IA</div>
     </div>
 
     <div class="deep rev" id="com">
@@ -398,10 +421,8 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="./comercio.html">Ver dossiê completo do Comércio →</a>
       </div>
-      <div class="dimg two">
-        <img src="./img/img-camara-fria.webp" alt="PROTEVE monitorando câmara fria comercial" loading="lazy">
-        <img src="./img/img-pode-agir.webp" alt="PROTEVE identificando e agindo em motor industrial" loading="lazy">
-      </div>
+      <div class="dimg tall"><img src="./img/nicho-det-comercio.webp" alt="PROTEVE Comércio: loja, câmara fria, expositores e compressores supervisionados (visual ilustrativo gerado por IA)" loading="lazy"></div>
+      <div class="dimgcap" style="order:1">Visual ilustrativo gerado por IA</div>
     </div>
 
     <div class="deep" id="faz">
@@ -416,7 +437,8 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Fazenda" target="_blank" rel="noopener">Quero para minha operação rural →</a>
       </div>
-      <div class="dimg"><img src="./img/img-piscicultura.webp" alt="PROTEVE monitorando operação de piscicultura, do tanque à logística" loading="lazy"></div>
+      <div class="dimg tall"><img src="./img/nicho-det-fazenda.webp" alt="PROTEVE Fazenda: bombas, irrigação, cercas e câmaras frias monitoradas (visual ilustrativo gerado por IA)" loading="lazy"></div>
+      <div class="dimgcap" style="order:3">Visual ilustrativo gerado por IA</div>
     </div>
 
     <div class="deep rev" id="ind">
@@ -431,7 +453,8 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Ind%C3%BAstria" target="_blank" rel="noopener">Quero para minha indústria →</a>
       </div>
-      <div class="dimg"><img src="./img/img-motor.webp" alt="PROTEVE: proteção inteligente para motores elétricos industriais" loading="lazy"></div>
+      <div class="dimg tall"><img src="./img/nicho-det-industria.webp" alt="PROTEVE Indústria: motores, painéis e monitoramento preditivo (visual ilustrativo gerado por IA)" loading="lazy"></div>
+      <div class="dimgcap" style="order:1">Visual ilustrativo gerado por IA</div>
     </div>
 
   </div>
