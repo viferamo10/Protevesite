@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="./img/favicon.png">
 <title>PROTEVE — Inteligência para entender, proteger e operar</title>
 <meta name="description" content="A PROTEVE é uma camada de inteligência que monitora energia, refrigeração e segurança da sua propriedade. O aviso chega no seu Telegram antes do prejuízo. Casa, comércio, fazenda e indústria em Santa Fé do Sul/SP e região.">
 <link rel="icon" type="image/png" href="./img/favicon.png">
@@ -26,9 +27,9 @@ a{color:inherit;text-decoration:none}
 /* ===== header ===== */
 header{position:sticky;top:0;z-index:50;background:rgba(247,249,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:32px;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.04em}
-.logo .mark{width:32px;height:32px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:15px}
-.logo small{display:block;font-family:var(--mono);font-size:6.5px;letter-spacing:.14em;color:var(--ink3);font-weight:400}
+.logo{display:flex;align-items:center}
+.logo-img{height:34px;display:block}
+.logo-img.light{height:30px}
 nav{display:flex;gap:26px;margin-left:auto;font-size:13.5px;color:var(--ink2)}
 nav a:hover{color:var(--ink)}
 .wa-btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:9px;padding:10px 16px;font-size:13px;font-weight:600}
@@ -164,13 +165,45 @@ nav{display:none}.burger{display:block}
 .pipe{grid-template-columns:repeat(2,1fr)}
 h1{font-size:34px}
 }
+
+/* product card thumb */
+.pr{overflow:hidden;padding:0}
+.pr .thumb{width:100%;height:140px;overflow:hidden;background:var(--paper)}
+.pr .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.pr:hover .thumb img{transform:scale(1.06)}
+.pr .prbody{padding:18px 18px 20px}
+
+/* deep-dive por produto */
+.deep{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;padding:54px 0;border-top:1px solid var(--line)}
+.deep:first-of-type{border-top:none}
+.deep.rev .dcopy{order:2}
+.deep.rev .dimg{order:1}
+.dimg img{width:100%;border-radius:16px;border:1px solid var(--line2);box-shadow:0 24px 50px rgba(14,27,36,.1);display:block}
+.dimg.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dimg.two img{height:100%;object-fit:cover}
+.dcopy .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--cyan-deep)}
+.dcopy h3{font-size:30px;letter-spacing:-.035em;margin:10px 0 12px}
+.dcopy p{font-size:14.5px;color:var(--ink2);margin-bottom:10px;max-width:460px}
+.dcopy ul{margin:14px 0 20px;padding:0;list-style:none}
+.dcopy li{font-size:13px;color:var(--ink2);padding-left:20px;position:relative;margin-bottom:7px}
+.dcopy li:before{content:'';position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--cyan-deep)}
+
+/* banner vidente full width */
+.vidente-banner{padding:0}
+.vidente-banner img{width:100%;display:block;border-radius:18px}
+
+@media (max-width:960px){
+.deep,.deep.rev .dcopy,.deep.rev .dimg{grid-template-columns:1fr!important;order:0!important}
+.deep{gap:22px;padding:40px 0}
+.dimg.two{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <a href="#" class="logo"><span class="mark">P</span><span>PROTEVE<small>INTELIGÊNCIA OPERACIONAL</small></span></a>
+    <a href="#" class="logo"><img src="./img/proteve-logo-dark.webp" alt="PROTEVE — Alimenta, Protege e Refrigera" class="logo-img"></a>
     <nav>
       <a href="#como">Como funciona</a>
       <a href="#produtos">Produtos</a>
@@ -248,11 +281,88 @@ h1{font-size:34px}
       <p>O mesmo núcleo de inteligência, adaptado à realidade de cada tipo de propriedade.</p>
     </div>
     <div class="prods">
-      <div class="pr "><span class="tag">PROTEVE™</span><h3>RESIDÊNCIA</h3><p>Casas, sobrados e sítios. Chuveiro, bomba, geladeira, portão e solar sob olhar permanente.</p><a href="https://wa.me/5517992174138" class="lnk">Saber mais →</a></div>
-      <div class="pr "><span class="tag">PROTEVE™</span><h3>COMÉRCIO</h3><p>Conveniências, padarias, supermercados e distribuidoras. Câmara fria, expositores e compressores supervisionados.</p><a href="./comercio.html" class="lnk">Ver dossiê Comércio →</a></div>
-      <div class="pr "><span class="tag">PROTEVE™</span><h3>FAZENDA</h3><p>Bombas, irrigação, cercas e câmaras frias. A operação rural acompanhada de onde você estiver.</p><a href="https://wa.me/5517992174138" class="lnk">Saber mais →</a></div>
-      <div class="pr "><span class="tag">PROTEVE™</span><h3>INDÚSTRIA</h3><p>Motores, compressores e processos com assinatura elétrica monitorada e histórico por ativo.</p><a href="https://wa.me/5517992174138" class="lnk">Saber mais →</a></div>
+      <a href="#res" class="pr"><div class="thumb"><img src="./img/nicho-casa.webp" alt="PROTEVE Residência" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>RESIDÊNCIA</h3><p>Casas, sobrados e sítios. Chuveiro, bomba, geladeira, portão e solar sob olhar permanente.</p><span class="lnk">Ver mais ↓</span></div></a>
+      <a href="#com" class="pr"><div class="thumb"><img src="./img/nicho-comercio.webp" alt="PROTEVE Comércio" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>COMÉRCIO</h3><p>Conveniências, padarias, supermercados e distribuidoras. Câmara fria, expositores e compressores supervisionados.</p><span class="lnk">Ver mais ↓</span></div></a>
+      <a href="#faz" class="pr"><div class="thumb"><img src="./img/nicho-fazenda.webp" alt="PROTEVE Fazenda" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>FAZENDA</h3><p>Bombas, irrigação, cercas e câmaras frias. A operação rural acompanhada de onde você estiver.</p><span class="lnk">Ver mais ↓</span></div></a>
+      <a href="#ind" class="pr"><div class="thumb"><img src="./img/nicho-industria.webp" alt="PROTEVE Indústria" loading="lazy"></div><div class="prbody"><span class="tag">PROTEVE™</span><h3>INDÚSTRIA</h3><p>Motores, compressores e processos com assinatura elétrica monitorada e histórico por ativo.</p><span class="lnk">Ver mais ↓</span></div></a>
     </div>
+  </div>
+</section>
+
+<!-- DEEP DIVE POR PRODUTO -->
+<section style="padding-top:10px">
+  <div class="wrap">
+
+    <div class="deep" id="res">
+      <div class="dcopy">
+        <span class="tag">PROTEVE™ RESIDÊNCIA</span>
+        <h3>Sua casa, sem susto na conta nem no equipamento.</h3>
+        <p>A PROTEVE monitora o consumo da casa inteira em tempo real e prioriza o que importa: quando várias cargas ligam juntas (chuveiro, ar-condicionado, forno, carro elétrico), ela gerencia a demanda antes de virar sobrecarga.</p>
+        <ul>
+          <li>Monitoramento de chuveiro, ar-condicionado, geladeira, bomba de piscina e portão</li>
+          <li>Gestão de prioridade de cargas — mantém o essencial, ajusta o resto</li>
+          <li>Alertas no app, Telegram ou Alexa</li>
+        </ul>
+        <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Resid%C3%AAncia" target="_blank" rel="noopener">Quero para minha casa →</a>
+      </div>
+      <div class="dimg"><img src="./img/img-residencia.webp" alt="PROTEVE Residência: gestão inteligente de cargas elétricas da casa" loading="lazy"></div>
+    </div>
+
+    <div class="deep rev" id="com">
+      <div class="dcopy">
+        <span class="tag">PROTEVE™ COMÉRCIO</span>
+        <h3>Câmara fria, compressor e loja — sob supervisão o tempo todo.</h3>
+        <p>Pra conveniências, padarias, supermercados e distribuidoras. A PROTEVE não olha só a temperatura: ela acompanha o compressor, o evaporador, a abertura de porta e a rede elétrica — e identifica quando o comportamento muda antes da perda de produto.</p>
+        <ul>
+          <li>Temperatura da câmara, do produto e do ambiente</li>
+          <li>Compressor, evaporador e condensadora monitorados individualmente</li>
+          <li>Pode avisar a equipe técnica e, quando autorizado, comandar o equipamento</li>
+        </ul>
+        <a class="btn-o" href="./comercio.html">Ver dossiê completo do Comércio →</a>
+      </div>
+      <div class="dimg two">
+        <img src="./img/img-camara-fria.webp" alt="PROTEVE monitorando câmara fria comercial" loading="lazy">
+        <img src="./img/img-pode-agir.webp" alt="PROTEVE identificando e agindo em motor industrial" loading="lazy">
+      </div>
+    </div>
+
+    <div class="deep" id="faz">
+      <div class="dcopy">
+        <span class="tag">PROTEVE™ FAZENDA</span>
+        <h3>Da represa ao caminhão, sua operação sob controle.</h3>
+        <p>Tanques, aeradores, bombas, câmaras frias e logística — a PROTEVE acompanha cada etapa da produção rural e aquícola, do início ao produto final, com alerta em tempo real se algo sair do padrão.</p>
+        <ul>
+          <li>Tanques, aeradores e bombas monitorados 24h</li>
+          <li>Câmaras frias e estocagem com controle de temperatura</li>
+          <li>Relatórios e histórico completo da operação</li>
+        </ul>
+        <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Fazenda" target="_blank" rel="noopener">Quero para minha operação rural →</a>
+      </div>
+      <div class="dimg"><img src="./img/img-piscicultura.webp" alt="PROTEVE monitorando operação de piscicultura, do tanque à logística" loading="lazy"></div>
+    </div>
+
+    <div class="deep rev" id="ind">
+      <div class="dcopy">
+        <span class="tag">PROTEVE™ INDÚSTRIA</span>
+        <h3>Motores mais seguros, inteligentes e produtivos.</h3>
+        <p>A PROTEVE integra tecnologia, proteção e monitoramento aos motores e painéis da sua indústria — aumentando a vida útil dos equipamentos, reduzindo paradas e trazendo mais controle pra operação.</p>
+        <ul>
+          <li>Vibração, temperatura, corrente e desequilíbrio de fases</li>
+          <li>Diagnóstico preditivo de falhas antes da parada</li>
+          <li>Ação automática (desarme de motor, contator ou setor) quando configurado</li>
+        </ul>
+        <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Ind%C3%BAstria" target="_blank" rel="noopener">Quero para minha indústria →</a>
+      </div>
+      <div class="dimg"><img src="./img/img-motor.webp" alt="PROTEVE: proteção inteligente para motores elétricos industriais" loading="lazy"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BANNER VIDENTE -->
+<section style="padding-top:0">
+  <div class="wrap vidente-banner">
+    <img src="./img/banner-vidente-completo.webp" alt="E se desse pra saber antes? Não é magia, é tecnologia — a PROTEVE aprende o comportamento dos seus equipamentos e avisa antes do problema virar prejuízo." loading="lazy">
   </div>
 </section>
 
@@ -327,7 +437,7 @@ h1{font-size:34px}
   <div class="wrap">
     <div class="fgrid">
       <div class="info">
-        <a href="#" class="logo"><span class="mark">P</span><span>PROTEVE<small>INTELIGÊNCIA OPERACIONAL</small></span></a>
+        <a href="#" class="logo"><img src="./img/proteve-logo-dark.webp" alt="PROTEVE — Alimenta, Protege e Refrigera" class="logo-img"></a>
         <p>Energia, refrigeração e segurança sob uma única camada de inteligência.<br>Santa Fé do Sul/SP e região.</p>
       </div>
       <div class="links">
