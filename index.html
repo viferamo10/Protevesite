@@ -248,6 +248,22 @@ h1{font-size:34px}
 .aicap{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--ink3);font:10px var(--mono);letter-spacing:.06em;padding:5px 10px;border-radius:99px;border:1px solid var(--line)}
 .dimgcap{display:none}
 
+
+/* laboratorio */
+.lab{padding:10px 0 20px}
+.labhead{max-width:640px;margin-bottom:26px}
+.labgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.labc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.labc .big{font-size:34px;font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.labc .big small{font-size:14px;color:var(--ink3);font-weight:500;letter-spacing:0}
+.labc h3{font-size:15px;margin:12px 0 6px}
+.labc p{font-size:13px;color:var(--ink2);margin:0}
+.labbar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--paper);border:1px solid var(--line);margin:12px 0 6px}
+.labbar i{display:block;background:var(--cyan-deep)}
+.labtruth{margin-top:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 14px 14px 0;padding:16px 18px;font-size:13.5px;color:var(--ink2)}
+.labtruth b{color:var(--ink)}
+@media (max-width:960px){.labgrid{grid-template-columns:1fr}}
+
 /* banner vidente full width */
 .vidente-banner{padding:0}
 .vidente-banner img{width:100%;display:block;border-radius:18px}
@@ -317,6 +333,7 @@ h1{font-size:34px}
       <a href="#como">Como funciona</a>
       <a href="#produtos">Produtos</a>
       <a href="#converse">Converse</a>
+      <a href="#laboratorio">Laboratório</a>
       <a href="#provas">Por que confiar</a>
       <a href="#sobre">Sobre</a>
     </nav>
@@ -327,6 +344,7 @@ h1{font-size:34px}
     <a href="#como">Como funciona</a>
     <a href="#produtos">Produtos</a>
     <a href="#converse">Converse com a PROTEVE</a>
+    <a href="#laboratorio">Laboratório</a>
     <a href="#provas">Por que confiar</a>
     <a href="#sobre">Sobre</a>
     <a href="https://wa.me/5517992174138">Falar no WhatsApp</a>
@@ -596,6 +614,39 @@ h1{font-size:34px}
     </div>
   </div>
 </section>
+
+<!-- LABORATORIO -->
+<section id="laboratorio" style="padding-top:0">
+  <div class="wrap lab">
+    <div class="labhead">
+      <span class="label">LABORATÓRIO PROTEVE</span>
+      <h2>Uma casa real, <span>lida registro por registro.</span></h2>
+      <p style="color:var(--ink2);margin-top:12px">Antes de chegar a qualquer cliente, a PROTEVE aprendeu numa casa de verdade, com moradores de verdade. Esta é a leitura de quase um ano de rotina elétrica, sem edição e sem apelido.</p>
+    </div>
+    <div class="labgrid">
+      <div class="labc">
+        <div class="big">166.106 <small>registros</small></div>
+        <h3>De dezembro de 2025 a outubro de 2026</h3>
+        <p>Cada ligar e desligar, cada ciclo e cada aviso ficou guardado e foi lido um a um.</p>
+      </div>
+      <div class="labc">
+        <div class="big">77% <small>à noite</small></div>
+        <h3>O ar-condicionado é o aparelho do sono</h3>
+        <p>De 3.587 registros, três em cada quatro acontecem entre 20h e 4h da manhã.</p>
+        <div class="labbar"><i style="width:77%"></i></div>
+      </div>
+      <div class="labc">
+        <div class="big">1.534 <small>aberturas</small></div>
+        <h3>O portão conta a hora que a casa acorda</h3>
+        <p>A maioria entre 5h e 10h. De madrugada, foram só 71 no ano inteiro.</p>
+      </div>
+    </div>
+    <div class="labtruth">
+      <b>O que o laboratório também ensinou:</b> o sistema antigo rotulava o ar-condicionado como outro aparelho, e mais de mil registros saíram com o nome errado. Foi o dado que mostrou o erro. Por isso cada aparelho passa a ter identidade própria, com marca, modelo e histórico, e a PROTEVE aprende a cada instalação.
+    </div>
+  </div>
+</section>
+
 
 <!-- A CASA QUE ENSINOU -->
 <section id="ensinou" style="padding-top:0">
