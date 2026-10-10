@@ -53,9 +53,9 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 :root{
---paper:#f7f9f8;--card:#ffffff;--line:#dfe7e4;--line2:#c9d6d1;
---ink:#0e1b24;--ink2:#43565f;--ink3:#84958f;
---blue:#28c7f7;--navy:#0e1b24;--amber:#f5ad45;--green:#1d7a4f;--cyan-deep:#0f8fb8;
+--paper:#f6f2ea;--card:#fffdf8;--line:#e5ddd0;--line2:#d3c7b2;
+--ink:#101c2b;--ink2:#44515f;--ink3:#8d9286;
+--blue:#28c7f7;--navy:#101c2b;--amber:#c9962e;--green:#1d7a4f;--cyan-deep:#0d6e8f;
 --mono:'DM Mono',monospace;
 --max:1180px;
 }
@@ -68,7 +68,7 @@ a{color:inherit;text-decoration:none}
 .label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
 
 /* ===== header ===== */
-header{position:sticky;top:0;z-index:50;background:rgba(247,249,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:32px;height:68px}
 .logo{display:flex;align-items:center}
 .logo-img{height:34px;display:block}
@@ -79,13 +79,13 @@ nav a:hover{color:var(--ink)}
 .wa-btn:hover{background:#1c2b36}
 .burger{display:none;margin-left:auto;background:none;border:0;color:var(--ink);font-size:22px;cursor:pointer}
 .mnav{display:none;border-top:1px solid var(--line);background:var(--card);padding:14px 28px 18px;flex-direction:column;gap:12px;font-size:15px}
-.mnav a.on{color:var(--cyan-deep);font-weight:600}
+.mnav a.on{color:var(--bronze,#c9962e);font-weight:600}
 
 
 /* ===== fases ===== */
 .fases-strip{padding:38px 0 8px;text-align:center}
 .fases-line{font-family:var(--mono);font-weight:600;font-size:clamp(12.5px,1.9vw,19px);letter-spacing:.05em;color:var(--ink);margin:12px 0 10px}
-.fases-line em{font-style:normal;color:var(--cyan-deep)}
+.fases-line em{font-style:normal;color:var(--bronze,#c9962e)}
 .fases-tag{font-size:15px;color:var(--ink2);margin:0 0 6px}
 .fases-tag small{display:block;font-size:11.5px;color:var(--ink3);margin-top:6px}
 
@@ -93,11 +93,11 @@ nav a:hover{color:var(--ink)}
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-grid-bg{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:70px 70px;mask-image:radial-gradient(ellipse 90% 80% at 30% 20%,black,transparent 75%)}
 .hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:64px 0 72px;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--cyan-deep);border:1px solid var(--line2);border-radius:999px;padding:7px 14px;background:var(--card);margin-bottom:22px}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--bronze,#c9962e);border:1px solid var(--line2);border-radius:999px;padding:7px 14px;background:var(--card);margin-bottom:22px}
 .kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(29,122,79,.35)}50%{box-shadow:0 0 0 7px rgba(29,122,79,0)}}
 h1{font-size:clamp(38px,5.2vw,62px);font-weight:600;letter-spacing:-.045em;line-height:1.02;margin-bottom:20px}
-h1 em{font-style:normal;color:var(--cyan-deep)}
+h1 em{font-style:normal;color:var(--bronze,#c9962e)}
 .hero-sub{font-size:16.5px;color:var(--ink2);max-width:520px;margin-bottom:28px}
 .hero-sub b{color:var(--ink)}
 .ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
@@ -124,13 +124,13 @@ h1 em{font-style:normal;color:var(--cyan-deep)}
 section{padding:72px 0}
 .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:38px}
 h2{font-size:clamp(30px,3.6vw,44px);font-weight:600;letter-spacing:-.04em;line-height:1.04}
-h2 span{color:var(--ink3)}
+h2 span{color:var(--bronze,#c9962e)}
 .shead p{max-width:360px;font-size:14px;color:var(--ink2)}
 
 /* pipeline */
 .pipe{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 .pstep{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center;position:relative}
-.pstep .c{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:rgba(40,199,247,.12);color:var(--cyan-deep);font-weight:700;font-size:14px}
+.pstep .c{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;background:rgba(40,199,247,.12);color:var(--bronze,#c9962e);font-weight:700;font-size:14px}
 .pstep b{font-size:12.5px;display:block;letter-spacing:-.01em}
 .pstep i{font-style:normal;font-size:10.5px;color:var(--ink3)}
 
@@ -138,7 +138,7 @@ h2 span{color:var(--ink3)}
 .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .pr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 20px;transition:transform .18s ease,box-shadow .18s ease}
 .pr:hover{transform:translateY(-5px);box-shadow:0 22px 40px rgba(14,27,36,.09)}
-.pr .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;color:var(--cyan-deep)}
+.pr .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;color:var(--bronze,#c9962e)}
 .pr h3{font-size:19px;letter-spacing:-.03em;margin:8px 0 8px}
 .pr p{font-size:12.5px;color:var(--ink2);margin-bottom:14px}
 .pr .lnk{font-size:12px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--line2);padding-bottom:2px}
@@ -176,7 +176,7 @@ h2 span{color:var(--ink3)}
 /* trust */
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .tr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
-.tr .ic{width:34px;height:34px;border-radius:9px;background:rgba(40,199,247,.1);color:var(--cyan-deep);display:grid;place-items:center;font-size:15px;margin-bottom:12px}
+.tr .ic{width:34px;height:34px;border-radius:9px;background:rgba(201,150,46,.12);color:var(--bronze,#c9962e);display:grid;place-items:center;font-size:15px;margin-bottom:12px}
 .tr b{font-size:14.5px;display:block;margin-bottom:6px}
 .tr p{font-size:12.5px;color:var(--ink2)}
 
@@ -232,12 +232,12 @@ h1{font-size:34px}
 .dimg img{width:100%;border-radius:16px;border:1px solid var(--line2);box-shadow:0 24px 50px rgba(14,27,36,.1);display:block}
 .dimg.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .dimg.two img{height:100%;object-fit:cover}
-.dcopy .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--cyan-deep)}
+.dcopy .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--bronze,#c9962e)}
 .dcopy h3{font-size:30px;letter-spacing:-.035em;margin:10px 0 12px}
 .dcopy p{font-size:14.5px;color:var(--ink2);margin-bottom:10px;max-width:460px}
 .dcopy ul{margin:14px 0 20px;padding:0;list-style:none}
 .dcopy li{font-size:13px;color:var(--ink2);padding-left:20px;position:relative;margin-bottom:7px}
-.dcopy li:before{content:'';position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--cyan-deep)}
+.dcopy li:before{content:'';position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--bronze,#c9962e)}
 
 
 /* ajuste de espacamento: foto e texto na mesma altura, sem vazio */
@@ -259,7 +259,7 @@ h1{font-size:34px}
 .labc h3{font-size:15px;margin:12px 0 6px}
 .labc p{font-size:13px;color:var(--ink2);margin:0}
 .labbar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--paper);border:1px solid var(--line);margin:12px 0 6px}
-.labbar i{display:block;background:var(--cyan-deep)}
+.labbar i{display:block;background:var(--bronze,#c9962e)}
 .labtruth{margin-top:14px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:0 14px 14px 0;padding:16px 18px;font-size:13.5px;color:var(--ink2)}
 .labtruth b{color:var(--ink)}
 @media (max-width:960px){.labgrid{grid-template-columns:1fr}}
@@ -302,7 +302,7 @@ h1{font-size:34px}
 .ens{padding:14px 0 56px}
 .ensgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
 .enst{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.enst .label{display:block;margin-bottom:8px;color:var(--cyan-deep)}
+.enst .label{display:block;margin-bottom:8px;color:var(--bronze,#c9962e)}
 .enst b{font-size:15px;display:block;margin-bottom:4px}
 .enst p{font-size:13px;color:var(--ink2);margin:0}
 @media (max-width:960px){.caso{grid-template-columns:1fr;gap:26px;padding:40px 0}.ensgrid{grid-template-columns:1fr}}
@@ -317,7 +317,7 @@ h1{font-size:34px}
 .prn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(14,27,36,.09)}
 .prn b{display:block;font-size:15.5px;letter-spacing:-.02em;margin-bottom:3px}
 .prn p{font-size:12.5px;color:var(--ink2);margin-bottom:8px}
-.prn .lnk{font-size:12px;font-weight:600;color:var(--cyan-deep);border-bottom:1px solid var(--line2);padding-bottom:2px}
+.prn .lnk{font-size:12px;font-weight:600;color:var(--bronze,#c9962e);border-bottom:1px solid var(--line2);padding-bottom:2px}
 @media (max-width:960px){.prodintro{grid-template-columns:1fr;gap:24px}.prodnav{grid-template-columns:1fr}}
 /* ficha de nicho alta */
 .dimg.tall img{aspect-ratio:2/3;object-fit:cover;object-position:top}
@@ -521,7 +521,7 @@ h1{font-size:34px}
     </div>
     <div class="chatcopy ">
       <span class="label">O jeito PROTEVE de conversar</span>
-      <h2 style="margin:10px 0 16px">Você pergunta.<br>Ela <span style="color:var(--cyan-deep)">responde com contexto.</span></h2>
+      <h2 style="margin:10px 0 16px">Você pergunta.<br>Ela <span style="color:var(--bronze,#c9962e)">responde com contexto.</span></h2>
       <p>Não é um painel cheio de número que ninguém entende. A PROTEVE fala com você no <b>Telegram</b>, com nome de setor e equipamento, e sugere o próximo passo — do jeito que um bom eletricista explicaria.</p>
       <div class="ctas">
         <a class="btn-p" href="https://t.me/protevecanal" target="_blank" rel="noopener">Ver no Telegram →</a>
@@ -566,7 +566,7 @@ h1{font-size:34px}
 <!-- CTA FINAL -->
 <section class="final" style="padding-top:20px">
   <div class="wrap">
-    <h2>E se você soubesse antes,<br><span style="color:var(--cyan-deep)">teria que esperar o prejuízo?</span></h2>
+    <h2>E se você soubesse antes,<br><span style="color:var(--bronze,#c9962e)">teria que esperar o prejuízo?</span></h2>
     <p>A PROTEVE instala, aprende e cuida. O aviso chega no seu celular — e você decide com contexto.</p>
     <div class="ctas ">
       <a class="btn-p" href="https://wa.me/5517992174138?text=Quero%20conhecer%20a%20PROTEVE" target="_blank" rel="noopener">Quero conhecer a PROTEVE →</a>
@@ -583,7 +583,7 @@ h1{font-size:34px}
     <div class="caso">
       <div class="casocopy">
         <span class="label">CASO REAL · CASA-PILOTO</span>
-        <h2>A geladeira avisou<br>antes de <span style="color:var(--cyan-deep)">queimar.</span></h2>
+        <h2>A geladeira avisou<br>antes de <span style="color:var(--bronze,#c9962e)">queimar.</span></h2>
         <p>Numa casa real monitorada 251 dias seguidos, a PROTEVE viu a geladeira começar a trabalhar diferente: cada vez mais ciclos, cada vez mais corrente, cada vez menos gelo.</p>
         <p>Foram <b>5 meses de sinais claros</b> antes do compressor queimar. O histórico guardava a história inteira: nenhuma queima foi surpresa, foi um desfile de sintomas.</p>
         <p>Na próxima geladeira, a diferença é o aviso chegar com tempo de sobra pra <b>decidir antes do prejuízo</b>.</p>
@@ -593,12 +593,12 @@ h1{font-size:34px}
         <div class="fpbig">0,82 <span style="color:var(--ink3)">→</span> 0,38</div>
         <svg viewBox="0 0 300 150" width="100%" height="auto" role="img" aria-label="Queda do fator de potência da geladeira de março a julho de 2026">
           <line x1="20" y1="130" x2="280" y2="130" stroke="var(--line2)" stroke-width="1"/>
-          <polyline points="20,35 68,59 116,77 164,102 212,106 260,115" fill="none" stroke="var(--cyan-deep)" stroke-width="2.5" stroke-linejoin="round"/>
-          <circle cx="20" cy="35" r="4" fill="var(--cyan-deep)"/>
-          <circle cx="68" cy="59" r="4" fill="var(--cyan-deep)"/>
-          <circle cx="116" cy="77" r="4" fill="var(--cyan-deep)"/>
-          <circle cx="164" cy="102" r="4" fill="var(--cyan-deep)"/>
-          <circle cx="212" cy="106" r="4" fill="var(--cyan-deep)"/>
+          <polyline points="20,35 68,59 116,77 164,102 212,106 260,115" fill="none" stroke="var(--bronze,#c9962e)" stroke-width="2.5" stroke-linejoin="round"/>
+          <circle cx="20" cy="35" r="4" fill="var(--bronze,#c9962e)"/>
+          <circle cx="68" cy="59" r="4" fill="var(--bronze,#c9962e)"/>
+          <circle cx="116" cy="77" r="4" fill="var(--bronze,#c9962e)"/>
+          <circle cx="164" cy="102" r="4" fill="var(--bronze,#c9962e)"/>
+          <circle cx="212" cy="106" r="4" fill="var(--bronze,#c9962e)"/>
           <circle cx="260" cy="115" r="5" fill="var(--navy)"/>
           <text x="20" y="24" font-size="10" fill="var(--ink2)" font-family="DM Mono,monospace">0,82</text>
           <text x="238" y="104" font-size="10" fill="var(--ink2)" font-family="DM Mono,monospace">0,38</text>
@@ -674,7 +674,7 @@ h1{font-size:34px}
     <div class="sobre">
       <div class="sobcopy">
         <span class="label">SOBRE A PROTEVE</span>
-        <h2>Quatorze anos de campo.<br>Agora com <span style="color:var(--cyan-deep)">inteligência.</span></h2>
+        <h2>Quatorze anos de campo.<br>Agora com <span style="color:var(--bronze,#c9962e)">inteligência.</span></h2>
         <p>Antes de existir como produto, a PROTEVE viveu no chão de obra: mais de uma década instalando e mantendo câmeras, alarmes, cercas, redes e quadros elétricos em residências, comércios, fazendas e indústrias da região de Santa Fé do Sul/SP.</p>
         <p>O que mudou não foi o compromisso, foi a capacidade: hoje a mesma experiência de campo opera com uma camada de inteligência que aprende o comportamento da sua instalação e avisa antes do prejuízo. <b>PROTEGEMOS O QUE FUNCIONA.</b></p>
       </div>
