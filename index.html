@@ -291,11 +291,18 @@ h1{font-size:34px}
 @media (max-width:960px){.sobre{grid-template-columns:1fr;gap:24px;padding:40px 0}}
 
 /* caso geladeira */
-.caso{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+.caso{display:grid;grid-template-columns:1fr .62fr 1fr;gap:40px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
 .casocopy .label{display:block;margin-bottom:8px}
 .casocopy h2{font-size:32px;letter-spacing:-.035em;margin-bottom:16px}
 .casocopy p{font-size:15px;color:var(--ink2);margin-bottom:12px;max-width:540px}
 .fpcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.casoimg{position:relative;display:flex;align-items:center;justify-content:center}
+.casoimg img{width:100%;max-width:270px;display:block}
+.casoimg .ilus{position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);white-space:nowrap;background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:var(--ink2)}
+.alerta{background:var(--card);border:1px solid var(--line);border-left:3px solid #d54d2f;border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.alerta .al{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:#d54d2f;margin-bottom:6px}
+.alerta b{font-size:14px;display:block;margin-bottom:3px}
+.alerta p{font-size:12.5px;color:var(--ink2);margin:0}
 .fpcard .label{display:block;margin-bottom:6px}
 .fpbig{font-size:26px;font-weight:700;letter-spacing:-.02em}
 .fpbig small{font-size:13px;color:var(--ink3);font-weight:400}
@@ -309,7 +316,7 @@ h1{font-size:34px}
 .enst .label{display:block;margin-bottom:8px;color:var(--bronze,#c9962e)}
 .enst b{font-size:15px;display:block;margin-bottom:4px}
 .enst p{font-size:13px;color:var(--ink2);margin:0}
-@media (max-width:960px){.caso{grid-template-columns:1fr;gap:26px;padding:40px 0}.ensgrid{grid-template-columns:1fr}}
+@media (max-width:960px){.caso{grid-template-columns:1fr;gap:26px;padding:40px 0}.casoimg img{max-width:190px}.ensgrid{grid-template-columns:1fr}}
 
 /* entrada nichos */
 .prodintro{display:grid;grid-template-columns:360px 1fr;gap:44px;align-items:center;margin-top:26px}
@@ -592,7 +599,17 @@ h1{font-size:34px}
         <p>Foram <b>5 meses de sinais claros</b> antes do compressor queimar. O histórico guardava a história inteira: nenhuma queima foi surpresa, foi um desfile de sintomas.</p>
         <p>Na próxima geladeira, a diferença é o aviso chegar com tempo de sobra pra <b>decidir antes do prejuízo</b>.</p>
       </div>
-      <div class="fpcard">
+      <div class="casoimg">
+        <img src="./img/geladeira-ilustrativa.png" alt="Ilustração de geladeira monitorada pela PROTEVE, com escudo da marca e sinal de alerta" loading="lazy">
+        <span class="ilus">VISUAL ILUSTRATIVO GERADO POR IA</span>
+      </div>
+      <div>
+        <div class="alerta">
+          <span class="al">⚠ AVISO · ATIVO</span>
+          <b>Geladeira operando fora do padrão</b>
+          <p>Ciclos subiram de 5,6 para 8,9 por dia e o fator de potência caiu de 0,82 para 0,38. Possível falha em andamento: recomendamos verificação técnica.</p>
+        </div>
+        <div class="fpcard">
         <span class="label">FATOR DE POTÊNCIA · MAR→JUL/2026</span>
         <div class="fpbig">0,82 <span style="color:var(--ink3)">→</span> 0,38</div>
         <svg viewBox="0 0 300 150" width="100%" height="auto" role="img" aria-label="Queda do fator de potência da geladeira de março a julho de 2026">
@@ -613,6 +630,7 @@ h1{font-size:34px}
           <span class="chip">ciclos/dia: 5,6 → 8,9 (+60%)</span>
           <span class="chip">sinais 5 meses antes da queima</span>
           <span class="chip">nova unidade instalada: 6,0 ciclos/dia</span>
+        </div>
         </div>
       </div>
     </div>
