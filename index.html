@@ -239,6 +239,15 @@ h1{font-size:34px}
 .dcopy li{font-size:13px;color:var(--ink2);padding-left:20px;position:relative;margin-bottom:7px}
 .dcopy li:before{content:'';position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--cyan-deep)}
 
+
+/* ajuste de espacamento: foto e texto na mesma altura, sem vazio */
+.deep{align-items:stretch;gap:44px;padding:48px 0}
+.deep .dcopy{display:flex;flex-direction:column;justify-content:center}
+.dimg{position:relative}
+.dimg.tall img{width:100%;height:100%;max-height:560px;object-fit:cover;object-position:center top}
+.aicap{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--ink3);font:10px var(--mono);letter-spacing:.06em;padding:5px 10px;border-radius:99px;border:1px solid var(--line)}
+.dimgcap{display:none}
+
 /* banner vidente full width */
 .vidente-banner{padding:0}
 .vidente-banner img{width:100%;display:block;border-radius:18px}
@@ -423,8 +432,7 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Resid%C3%AAncia" target="_blank" rel="noopener">Quero para minha casa →</a>
       </div>
-      <div class="dimg tall"><img src="./img/nicho-det-residencia.webp" alt="PROTEVE Residência: casa monitorada em tempo real, do chuveiro à geladeira (visual ilustrativo gerado por IA)" loading="lazy"></div>
-      <div class="dimgcap" style="order:3">Visual ilustrativo gerado por IA</div>
+      <div class="dimg tall"><img src="./img/nicho-det-residencia.webp" alt="PROTEVE Residência: casa monitorada em tempo real, do chuveiro à geladeira (visual ilustrativo gerado por IA)" loading="lazy"><span class="aicap">Visual ilustrativo gerado por IA</span></div>
     </div>
 
     <div class="deep rev" id="com">
@@ -439,8 +447,7 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="./comercio.html">Ver dossiê completo do Comércio →</a>
       </div>
-      <div class="dimg tall"><img src="./img/nicho-det-comercio.webp" alt="PROTEVE Comércio: loja, câmara fria, expositores e compressores supervisionados (visual ilustrativo gerado por IA)" loading="lazy"></div>
-      <div class="dimgcap" style="order:1">Visual ilustrativo gerado por IA</div>
+      <div class="dimg tall"><img src="./img/nicho-det-comercio.webp" alt="PROTEVE Comércio: loja, câmara fria, expositores e compressores supervisionados (visual ilustrativo gerado por IA)" loading="lazy"><span class="aicap">Visual ilustrativo gerado por IA</span></div>
     </div>
 
     <div class="deep" id="faz">
@@ -455,8 +462,7 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Fazenda" target="_blank" rel="noopener">Quero para minha operação rural →</a>
       </div>
-      <div class="dimg tall"><img src="./img/nicho-det-fazenda.webp" alt="PROTEVE Fazenda: bombas, irrigação, cercas e câmaras frias monitoradas (visual ilustrativo gerado por IA)" loading="lazy"></div>
-      <div class="dimgcap" style="order:3">Visual ilustrativo gerado por IA</div>
+      <div class="dimg tall"><img src="./img/nicho-det-fazenda.webp" alt="PROTEVE Fazenda: bombas, irrigação, cercas e câmaras frias monitoradas (visual ilustrativo gerado por IA)" loading="lazy"><span class="aicap">Visual ilustrativo gerado por IA</span></div>
     </div>
 
     <div class="deep rev" id="ind">
@@ -471,8 +477,7 @@ h1{font-size:34px}
         </ul>
         <a class="btn-o" href="https://wa.me/5517992174138?text=Quero%20saber%20sobre%20a%20PROTEVE%20Ind%C3%BAstria" target="_blank" rel="noopener">Quero para minha indústria →</a>
       </div>
-      <div class="dimg tall"><img src="./img/nicho-det-industria.webp" alt="PROTEVE Indústria: motores, painéis e monitoramento preditivo (visual ilustrativo gerado por IA)" loading="lazy"></div>
-      <div class="dimgcap" style="order:1">Visual ilustrativo gerado por IA</div>
+      <div class="dimg tall"><img src="./img/nicho-det-industria.webp" alt="PROTEVE Indústria: motores, painéis e monitoramento preditivo (visual ilustrativo gerado por IA)" loading="lazy"><span class="aicap">Visual ilustrativo gerado por IA</span></div>
     </div>
 
   </div>
